@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Valentine's Day ❤️</title>
+    <link rel="stylesheet" href="valentine-styles.css">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots" id="navDots">
+        <div class="dot active" data-slide="0"></div>
+        <div class="dot" data-slide="1"></div>
+        <div class="dot" data-slide="2"></div>
+        <div class="dot" data-slide="3"></div>
+        <div class="dot" data-slide="4"></div>
+        <div class="dot" data-slide="5"></div>
+    </div>
+
+    <!-- Back Button -->
+    <button class="back-btn hidden" id="backBtn">← Back</button>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Alert -->
+    <div class="custom-alert hidden" id="customAlert">
+        <h2 id="alertTitle"></h2>
+        <p id="alertMessage"></p>
+    </div>
+
+    <!-- Loading Animation -->
+    <div class="loading-overlay hidden" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-icon">⏳</div>
+            <h2>Loading...</h2>
+            <div class="loading-bar">
+                <div class="loading-bar-fill" id="loadingBarFill"></div>
+            </div>
+            <div class="loading-error hidden" id="loadingError">
+                <p class="error-text">ERROR DETECTED</p>
+                <p class="error-subtext">Wrong decision made</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 1: Landing -->
+    <section class="slide active" data-slide="0">
+        <div class="slide-content">
+            <h1 class="landing-title">Happy Valentine's Day</h1>
+            <h2 class="landing-name">Tshireletso</h2>
+            <p class="landing-from">With all my love, Saneliso</p>
+            <button class="btn-primary" id="beginBtn">BEGIN</button>
+        </div>
+    </section>
+
+    <!-- Slide 2: Proposal -->
+    <section class="slide" data-slide="1">
+        <div class="slide-content">
+            <h1 class="proposal-title">Will You Be My Valentine?</h1>
+            <div class="buttons-container">
+                <button class="btn-yes" id="yesBtn">YES</button>
+                <button class="btn-no" id="noBtn">NO</button>
+            </div>
+            <p class="proposal-hint">Choose what your heart tells you</p>
+        </div>
+    </section>
+
+    <!-- Slide 3: Error Page -->
+    <section class="slide error-slide" data-slide="2">
+        <div class="slide-content">
+            <div class="error-icon">⚠</div>
+            <h1 class="error-title">Error Detected</h1>
+            <p class="error-subtitle">Wrong decision made</p>
+            <div class="error-details">
+                <p>Status: Incorrect choice detected</p>
+                <p>Required: Follow your heart</p>
+                <p>Action: Make correct decision</p>
+            </div>
+            <button class="btn-primary" id="goBackBtn">GO BACK</button>
+        </div>
+    </section>
+
+    <!-- Slide 4: Letter Page -->
+    <section class="slide letter-slide" data-slide="3">
+        <div class="slide-content scrollable">
+            <div class="letter-container">
+                <h1 class="letter-title">For You</h1>
+                <div class="letter-text">
+                    <p class="letter-greeting">My Dearest Tshireletso,</p>
+                    
+                    <p>From the very first moment I saw you, I knew there was something extraordinary about you. Your presence changed the atmosphere, and I found myself drawn to the grace and elegance you carry so naturally.</p>
+                    
+                    <p>Every day with you is a gift I treasure. You transform the mundane into something remarkable, and you give me strength when challenges arise. With you, everything makes sense.</p>
+                    
+                    <p>You've shown me what it means to truly connect with another soul. Your intelligence, your compassion, your beautiful spirit—these are the qualities I admire deeply.</p>
+                    
+                    <p>I want to walk beside you through every chapter ahead. To celebrate your successes, support you through difficulties, and create a lifetime of meaningful moments together.</p>
+                    
+                    <p>Thank you for choosing me. Thank you for being exactly who you are.</p>
+                    
+                    <p class="letter-closing">With all my heart,</p>
+                    
+                    <p class="letter-signature">Saneliso</p>
+                </div>
+            </div>
+            <div class="continue-btn-container">
+                <button class="btn-primary" id="continueToGalleryBtn">CONTINUE →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Drawing Gallery -->
+    <section class="slide gallery-slide" data-slide="4">
+        <div class="slide-content scrollable">
+            <h1 class="gallery-title">Our Creative Journey</h1>
+            <p class="gallery-subtitle">Moments captured in art</p>
+            
+            <div class="gallery-grid">
+                <!-- Image placeholders - replace with actual images -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <!-- Replace with: <img src="your-image-1.jpg" alt="Drawing 1"> -->
+                        🎨
+                    </div>
+                    <p class="gallery-caption">Memory 1</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        🎨
+                    </div>
+                    <p class="gallery-caption">Memory 2</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        🎨
+                    </div>
+                    <p class="gallery-caption">Memory 3</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        🎨
+                    </div>
+                    <p class="gallery-caption">Memory 4</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        🎨
+                    </div>
+                    <p class="gallery-caption">Memory 5</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        🎨
+                    </div>
+                    <p class="gallery-caption">Memory 6</p>
+                </div>
+            </div>
+            
+            <div class="continue-btn-container">
+                <button class="btn-primary" id="continueToMessagesBtn">CONTINUE →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: Love Messages -->
+    <section class="slide messages-slide" data-slide="5">
+        <div class="slide-content scrollable">
+            <h1 class="messages-title">What You Mean to Me</h1>
+            
+            <div class="messages-grid">
+                <div class="message-card">
+                    <p>"From the moment I met you, my world became softer and brighter"</p>
+                </div>
+                <div class="message-card">
+                    <p>"Your smile is my favorite notification"</p>
+                </div>
+                <div class="message-card">
+                    <p>"You are peace in human form"</p>
+                </div>
+                <div class="message-card">
+                    <p>"Every day with you feels like answered prayer"</p>
+                </div>
+                <div class="message-card">
+                    <p>"I choose you. Today. Tomorrow. Always"</p>
+                </div>
+                <div class="message-card">
+                    <p>"You are my best decision"</p>
+                </div>
+                <div class="message-card">
+                    <p>"Loving you is the easiest thing I've ever done"</p>
+                </div>
+                <div class="message-card">
+                    <p>"I can't wait to build memories, dreams, and a future with you"</p>
+                </div>
+            </div>
+            
+            <div class="final-signature">
+                <p>Forever yours, Saneliso</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="valentine-script.js"></script>
+</body>
+</html>
